@@ -13,26 +13,33 @@ export default function AboutPage() {
 
             <div className="pt-20 flex-grow">
                 {/* Hero Section */}
-                <section className="bg-blue-50 py-16 md:py-24">
-                    <div className="container mx-auto px-4">
+                <section className="relative py-16 md:py-24">
+                    <div
+                        className="absolute inset-0 bg-cover bg-center opacity-30 z-0"
+                        style={{
+                            backgroundImage: "url('/images/mercedes-e-class-1.jpg')",
+                        }}
+                    />
+                    <div className="absolute inset-0 bg-blue-800/50 z-0"></div>
+                    <div className="container mx-auto px-4 relative z-10">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
                             <div className="md:w-1/2 text-right">
-                                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-arabic">من نحن</h1>
-                                <p className="text-lg text-gray-700 mb-8 font-arabic leading-relaxed">
+                                <h1 className="text-3xl md:text-4xl font-bold text-white mb-6 font-arabic">من نحن</h1>
+                                <p className="text-lg text-white/90 mb-8 font-arabic leading-relaxed">
                                     شركة إيجار السيارات الرائدة في المملكة العربية السعودية، نقدم خدمات تأجير السيارات بأعلى مستويات الجودة والراحة. نسعى دائماً لتوفير تجربة استثنائية لعملائنا من خلال أسطول متنوع من السيارات الحديثة وخدمة عملاء متميزة.
                                 </p>
                                 <div className="flex flex-wrap gap-4 justify-end">
-                                    <div className="flex items-center bg-white py-2 px-4 rounded-lg shadow-sm">
+                                    <div className="flex items-center bg-white/90 py-2 px-4 rounded-lg shadow-sm backdrop-blur-sm">
                                         <span className="text-xl font-bold text-blue-600 ml-2">+10,000</span>
-                                        <span className="text-gray-600 font-arabic">عميل سعيد</span>
+                                        <span className="text-gray-700 font-arabic">عميل سعيد</span>
                                     </div>
-                                    <div className="flex items-center bg-white py-2 px-4 rounded-lg shadow-sm">
+                                    <div className="flex items-center bg-white/90 py-2 px-4 rounded-lg shadow-sm backdrop-blur-sm">
                                         <span className="text-xl font-bold text-blue-600 ml-2">+500</span>
-                                        <span className="text-gray-600 font-arabic">سيارة</span>
+                                        <span className="text-gray-700 font-arabic">سيارة</span>
                                     </div>
-                                    <div className="flex items-center bg-white py-2 px-4 rounded-lg shadow-sm">
+                                    <div className="flex items-center bg-white/90 py-2 px-4 rounded-lg shadow-sm backdrop-blur-sm">
                                         <span className="text-xl font-bold text-blue-600 ml-2">+15</span>
-                                        <span className="text-gray-600 font-arabic">فرع</span>
+                                        <span className="text-gray-700 font-arabic">فرع</span>
                                     </div>
                                 </div>
                             </div>

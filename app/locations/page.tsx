@@ -44,11 +44,18 @@ export default function LocationsPage() {
 
             <div className="pt-20 flex-grow">
                 {/* Hero Section */}
-                <section className="bg-gradient-to-b from-blue-50 to-white">
-                    <div className="container mx-auto px-4 py-16 md:py-24">
+                <section className="relative h-[300px]">
+                    <div
+                        className="absolute inset-0 bg-cover bg-center z-0"
+                        style={{
+                            backgroundImage: "url('/images/hero-image1.jpg')",
+                        }}
+                    />
+                    <div className="absolute inset-0 bg-blue-900/50 z-0"></div>
+                    <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-10">
                         <div className="text-center max-w-3xl mx-auto">
-                            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-arabic">مواقع فروعنا</h1>
-                            <p className="text-lg md:text-xl text-gray-700 font-arabic leading-relaxed">
+                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-arabic">مواقع فروعنا</h1>
+                            <p className="text-lg md:text-xl text-white/90 font-arabic leading-relaxed">
                                 نتواجد في مختلف مدن المملكة العربية السعودية لنكون دائماً بالقرب منك. ابحث عن الفرع الأقرب إليك من خلال الخريطة أدناه.
                             </p>
                         </div>

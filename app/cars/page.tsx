@@ -76,13 +76,14 @@ export default function CarsPage() {
 
             <div className="pt-20 flex-grow">
                 {/* Hero Banner */}
-                <div className="relative h-[250px] md:h-[300px] bg-gradient-to-r from-blue-700 to-blue-500 overflow-hidden">
+                <div className="relative h-[300px] overflow-hidden">
                     <div
-                        className="absolute inset-0 bg-cover bg-center opacity-20"
+                        className="absolute inset-0 bg-cover bg-center"
                         style={{
-                            backgroundImage: "url('/images/hero-background.jpg')",
+                            backgroundImage: "url('/images/hero-image2.jpg')",
                         }}
                     />
+                    <div className="absolute inset-0 bg-blue-900/60"></div>
                     <div className="relative h-full flex flex-col items-center justify-center px-4 text-white z-10">
                         <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center font-arabic">استكشف تشكيلة سياراتنا</h1>
                         <p className="max-w-2xl text-center text-white/90 font-arabic text-lg">
@@ -412,8 +413,8 @@ const CarListItem = ({ car }: CarListItemProps) => {
                             <a
                                 href={`/cars/${car.id}`}
                                 className={`inline-block w-full sm:w-auto px-6 py-3 rounded-lg font-medium transition-all text-center ${car.availability
-                                        ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow'
-                                        : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                                    ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-sm hover:shadow'
+                                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                                     }`}
                             >
                                 {car.availability ? 'عرض التفاصيل والحجز' : 'غير متوفرة'}

@@ -142,9 +142,9 @@ export default function ContactPage() {
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
-        visible: { 
+        visible: {
             opacity: 1,
-            transition: { 
+            transition: {
                 staggerChildren: 0.1,
                 delayChildren: 0.2
             }
@@ -153,8 +153,8 @@ export default function ContactPage() {
 
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
-        visible: { 
-            y: 0, 
+        visible: {
+            y: 0,
             opacity: 1,
             transition: { duration: 0.5 }
         }
@@ -174,22 +174,29 @@ export default function ContactPage() {
                 <title>تواصل معنا | رينت أ كار</title>
                 <meta name="description" content="تواصل مع رينت أ كار للاستفسارات والحجوزات. فريقنا جاهز لمساعدتك في جميع احتياجاتك." />
             </Head>
-            
+
             <main className="min-h-screen flex flex-col">
                 <Navbar />
 
                 <div className="pt-20 flex-grow">
                     {/* Hero Section */}
-                    <section className="bg-gradient-to-r from-blue-50 to-blue-100">
-                        <div className="container mx-auto px-4 py-16 md:py-20">
-                            <motion.div 
+                    <section className="relative h-[300px]">
+                        <div
+                            className="absolute inset-0 bg-cover bg-center z-0"
+                            style={{
+                                backgroundImage: "url('/images/bmw-x5-1.jpg')",
+                            }}
+                        />
+                        <div className="absolute inset-0 bg-blue-900/70 z-0"></div>
+                        <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-10">
+                            <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                                 className="text-center max-w-3xl mx-auto"
                             >
-                                <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 font-arabic">تواصل معنا</h1>
-                                <p className="text-lg md:text-xl text-gray-700 font-arabic leading-relaxed">
+                                <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 font-arabic">تواصل معنا</h1>
+                                <p className="text-lg md:text-xl text-white/90 font-arabic leading-relaxed">
                                     نحن هنا للإجابة على استفساراتك ومساعدتك في كل ما تحتاجه. لا تتردد في التواصل معنا عبر أي من وسائل الاتصال المتاحة.
                                 </p>
                             </motion.div>
@@ -199,14 +206,14 @@ export default function ContactPage() {
                     {/* Contact Information */}
                     <section className="py-16" dir="rtl">
                         <div className="container mx-auto px-4">
-                            <motion.div 
+                            <motion.div
                                 variants={containerVariants}
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.3 }}
                                 className="grid grid-cols-1 md:grid-cols-3 gap-8"
                             >
-                                <motion.div 
+                                <motion.div
                                     variants={itemVariants}
                                     className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
                                 >
@@ -222,7 +229,7 @@ export default function ContactPage() {
                                     </p>
                                 </motion.div>
 
-                                <motion.div 
+                                <motion.div
                                     variants={itemVariants}
                                     className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
                                 >
@@ -238,7 +245,7 @@ export default function ContactPage() {
                                     </p>
                                 </motion.div>
 
-                                <motion.div 
+                                <motion.div
                                     variants={itemVariants}
                                     className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1"
                                 >
@@ -258,7 +265,7 @@ export default function ContactPage() {
                         <div className="container mx-auto px-4">
                             <div className="flex flex-col lg:flex-row gap-12">
                                 {/* Contact Form */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: -30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.7 }}
@@ -268,7 +275,7 @@ export default function ContactPage() {
                                     <h2 className="text-2xl font-bold text-gray-900 mb-6 font-arabic">أرسل لنا رسالة</h2>
 
                                     {submitSuccess && (
-                                        <motion.div 
+                                        <motion.div
                                             initial={{ opacity: 0, y: -10 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             className="bg-green-50 border border-green-200 rounded-lg p-5 mb-6 shadow-sm"
@@ -409,7 +416,7 @@ export default function ContactPage() {
                                 </motion.div>
 
                                 {/* Locations */}
-                                <motion.div 
+                                <motion.div
                                     initial={{ opacity: 0, x: 30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.7 }}
@@ -474,7 +481,7 @@ export default function ContactPage() {
                     {/* FAQ Section */}
                     <section className="py-16 bg-gray-50" dir="rtl">
                         <div className="container mx-auto px-4">
-                            <motion.div 
+                            <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.7 }}
@@ -485,8 +492,8 @@ export default function ContactPage() {
 
                                 <div className="space-y-4">
                                     {faqItems.map((item, index) => (
-                                        <div 
-                                            key={index} 
+                                        <div
+                                            key={index}
                                             className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300"
                                         >
                                             <button
@@ -500,10 +507,9 @@ export default function ContactPage() {
                                                     </svg>
                                                 </div>
                                             </button>
-                                            <div 
-                                                className={`px-6 overflow-hidden transition-all duration-300 ${
-                                                    activeAccordion === index ? 'max-h-96 pb-5' : 'max-h-0'
-                                                }`}
+                                            <div
+                                                className={`px-6 overflow-hidden transition-all duration-300 ${activeAccordion === index ? 'max-h-96 pb-5' : 'max-h-0'
+                                                    }`}
                                             >
                                                 <p className="text-gray-600 font-arabic">{item.answer}</p>
                                             </div>
