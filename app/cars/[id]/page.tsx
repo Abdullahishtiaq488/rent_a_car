@@ -9,6 +9,7 @@ import { Car } from '../../../types';
 import { cars } from '../../../data/cars';
 import { locations } from '../../../data/locations';
 import { CalendarIcon, Users, Fuel, Gauge, Check, Info, MapPin } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CarDetailsPage() {
     const params = useParams();
@@ -73,12 +74,12 @@ export default function CarDetailsPage() {
                     <div className="text-center">
                         <h1 className="text-2xl font-bold text-gray-900 mb-4 font-arabic">{error || 'حدث خطأ'}</h1>
                         <p className="text-gray-600 mb-8 font-arabic">عذراً، لا يمكن العثور على السيارة المطلوبة</p>
-                        <a
+                        <Link
                             href="/cars"
                             className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition-colors font-arabic"
                         >
                             العودة إلى قائمة السيارات
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <Footer />
@@ -112,9 +113,9 @@ export default function CarDetailsPage() {
                 <div className="bg-gray-100 py-3" dir="rtl">
                     <div className="container mx-auto px-4">
                         <div className="flex items-center text-sm text-gray-600 font-arabic">
-                            <a href="/" className="hover:text-blue-600">الرئيسية</a>
+                            <Link href="/" className="hover:text-blue-600">الرئيسية</Link>
                             <span className="mx-2">/</span>
-                            <a href="/cars" className="hover:text-blue-600">السيارات</a>
+                            <Link href="/cars" className="hover:text-blue-600">السيارات</Link>
                             <span className="mx-2">/</span>
                             <span className="text-gray-900">{car.brand} {car.model}</span>
                         </div>

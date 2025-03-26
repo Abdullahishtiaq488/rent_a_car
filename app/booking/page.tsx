@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
+import Link from 'next/link';
 import { Car } from '../../types';
 import { cars } from '../../data/cars';
 import { locations } from '../../data/locations';
@@ -291,12 +292,12 @@ export default function BookingPage() {
 
                                 {/* Actions */}
                                 <div className="flex flex-col sm:flex-row gap-4">
-                                    <a
+                                    <Link
                                         href="/"
                                         className="inline-flex justify-center items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition-colors font-arabic w-full"
                                     >
                                         العودة للرئيسية
-                                    </a>
+                                    </Link>
                                     <button
                                         className="inline-flex justify-center items-center px-6 py-3 bg-white hover:bg-gray-50 text-gray-800 font-bold rounded-lg border border-gray-300 transition-colors font-arabic w-full"
                                         onClick={() => window.print()}
@@ -322,11 +323,11 @@ export default function BookingPage() {
                 <div className="bg-gray-100 py-3" dir="rtl">
                     <div className="container mx-auto px-4">
                         <div className="flex items-center text-sm text-gray-600 font-arabic">
-                            <a href="/" className="hover:text-blue-600">الرئيسية</a>
+                            <Link href="/" className="hover:text-blue-600">الرئيسية</Link>
                             <span className="mx-2">/</span>
-                            <a href="/cars" className="hover:text-blue-600">السيارات</a>
+                            <Link href="/cars" className="hover:text-blue-600">السيارات</Link>
                             <span className="mx-2">/</span>
-                            <a href={`/cars/${bookingData.car.id}`} className="hover:text-blue-600">{bookingData.car.brand} {bookingData.car.model}</a>
+                            <Link href={`/cars/${bookingData.car.id}`} className="hover:text-blue-600">{bookingData.car.brand} {bookingData.car.model}</Link>
                             <span className="mx-2">/</span>
                             <span className="text-gray-900">تأكيد الحجز</span>
                         </div>

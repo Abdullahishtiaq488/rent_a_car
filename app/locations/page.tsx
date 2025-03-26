@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
+import Link from 'next/link';
 import { Phone, MapPin, Clock, Search } from 'lucide-react';
 import { locations } from '../../data/locations';
 
@@ -114,11 +115,10 @@ export default function LocationsPage() {
                                         {cityLocations.map((location) => (
                                             <div
                                                 key={location.id}
-                                                className={`bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${
-                                                    location.isMainBranch 
-                                                        ? 'border-2 border-blue-500 bg-blue-50/30' 
-                                                        : 'border border-gray-200'
-                                                }`}
+                                                className={`bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 ${location.isMainBranch
+                                                    ? 'border-2 border-blue-500 bg-blue-50/30'
+                                                    : 'border border-gray-200'
+                                                    }`}
                                             >
                                                 {location.isMainBranch && (
                                                     <div className="bg-blue-600 text-white text-xs font-bold uppercase py-1.5 px-3 rounded-full inline-block mb-4 font-arabic shadow-sm">
@@ -138,8 +138,8 @@ export default function LocationsPage() {
 
                                                     <div className="flex items-center">
                                                         <Phone className="h-5 w-5 text-blue-600 ml-3 flex-shrink-0" />
-                                                        <a 
-                                                            href={`tel:${location.phone}`} 
+                                                        <a
+                                                            href={`tel:${location.phone}`}
                                                             className="text-gray-700 hover:text-blue-600 transition-colors"
                                                         >
                                                             {location.phone}
@@ -231,18 +231,18 @@ export default function LocationsPage() {
                                 زر أقرب فرع إليك أو احجز سيارتك أونلاين الآن واستمتع بتجربة قيادة لا مثيل لها
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a
+                                <Link
                                     href="/cars"
                                     className="inline-flex justify-center items-center px-8 py-4 bg-white hover:bg-gray-100 text-blue-700 font-bold rounded-lg transition-all shadow-md hover:shadow-lg font-arabic text-lg"
                                 >
                                     استكشف السيارات
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/contact"
                                     className="inline-flex justify-center items-center px-8 py-4 bg-blue-800 hover:bg-blue-900 text-white font-bold rounded-lg transition-all shadow-md hover:shadow-lg border border-blue-500 font-arabic text-lg"
                                 >
                                     تواصل معنا
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

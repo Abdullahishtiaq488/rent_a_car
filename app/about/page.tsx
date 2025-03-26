@@ -3,6 +3,7 @@
 import { Navbar } from '../../components/Navbar';
 import { Footer } from '../../components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Check, Clock, Shield, Car, Star, MapPin, Users } from 'lucide-react';
 
 export default function AboutPage() {
@@ -238,18 +239,18 @@ export default function AboutPage() {
                                 استأجر سيارتك اليوم واستمتع بتجربة قيادة لا مثيل لها. أسطول متنوع من السيارات بانتظارك.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a
+                                <Link
                                     href="/cars"
                                     className="inline-flex justify-center items-center px-8 py-3 bg-white hover:bg-gray-100 text-blue-700 font-bold rounded-lg transition-colors font-arabic text-lg"
                                 >
                                     استكشف السيارات
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/contact"
                                     className="inline-flex justify-center items-center px-8 py-3 bg-blue-700 hover:bg-blue-800 text-white font-bold rounded-lg transition-colors border border-blue-500 font-arabic text-lg"
                                 >
                                     تواصل معنا
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
