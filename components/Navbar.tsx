@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, User, Car, Phone, MapPin } from 'lucide-react';
+import { Menu, X, Car } from 'lucide-react';
 
 export const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

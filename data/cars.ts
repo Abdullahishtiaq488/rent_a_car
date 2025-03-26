@@ -28,7 +28,7 @@ export const cars: Car[] = [
     seats: 5,
     pricePerDay: 200,
     availability: true,
-    images: ['/images/toyota-camry-2.jpg',],
+    images: ['/images/toyota-camry.jpg',],
     features: ['بلوتوث', 'مثبت سرعة', 'كاميرا خلفية', 'نظام تكييف', 'شاشة لمس'],
     category: 'economy',
     rating: 4.5,
