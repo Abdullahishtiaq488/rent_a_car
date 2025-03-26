@@ -198,7 +198,7 @@ export default function AboutPage() {
                             <div className="text-center">
                                 <div className="mb-4 rounded-full overflow-hidden h-40 w-40 mx-auto shadow-md relative">
                                     <Image
-                                        src="/images/boy2.jpeg"
+                                        src="/images/girl_1.jpg"
                                         alt="عضو الفريق"
                                         fill
                                         className="object-cover"
@@ -224,7 +224,7 @@ export default function AboutPage() {
                             <div className="text-center">
                                 <div className="mb-4 rounded-full overflow-hidden h-40 w-40 mx-auto shadow-md relative">
                                     <Image
-                                        src="/images/boy4.jpeg"
+                                        src="/images/girl_2.jpg"
                                         alt="عضو الفريق"
                                         fill
                                         className="object-cover"

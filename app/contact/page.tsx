@@ -184,7 +184,7 @@ export default function ContactPage() {
                         <div
                             className="absolute inset-0 bg-cover bg-center z-0"
                             style={{
-                                backgroundImage: "url('/images/bmw-x5-1.jpg')",
+                                backgroundImage: "url('/images/contact_us.jpg')",
                             }}
                         />
                         <div className="absolute inset-0 bg-blue-900/70 z-0"></div>
