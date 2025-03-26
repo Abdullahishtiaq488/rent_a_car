@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { CarCard } from './CarCard';
-import { Car } from '../types';
 import { cars } from '../data/cars';
 import Link from 'next/link';
 
@@ -39,8 +38,8 @@ export const FeaturedCars = () => {
                                 key={category.id}
                                 onClick={() => setActiveCategory(category.id)}
                                 className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${activeCategory === category.id
-                                        ? 'bg-blue-600 text-white'
-                                        : 'text-gray-700 hover:text-blue-600'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'text-gray-700 hover:text-blue-600'
                                     }`}
                             >
                                 {category.label}
